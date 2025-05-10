@@ -5,4 +5,3 @@ if __name__ == "__main__":
     for x in range(len(list)):
         if(list[x][0] != '_'):
             print(list[x])
-
