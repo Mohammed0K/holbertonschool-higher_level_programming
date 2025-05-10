@@ -3,8 +3,8 @@ def fizzbuzz():
     for i in range(1, 101):
         c = ""
         if (i % 3 == 0):
-            c += "Fizz"
+            s += "Fizz"
         if (i % 5 == 0):
-            c += "Buzz"
+            s += "Buzz"
         print(" ""{}".format(c), end="")
         print("", end="")
