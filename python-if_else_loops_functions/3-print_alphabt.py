@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 for i in range(ord('a'), ord('z') + 1):
-    i = chr(i)
-    if i != "e" and i != "q":
-        print(i, end="")
+    c = chr(i)
+    if c != "e" and i != "q":
+        print("{}".format(chr(i)), end='')
