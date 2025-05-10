@@ -8,5 +8,5 @@ if __name__ == "__main__":
         print("1 argument:")
     else:
         print("{} arguments:".format(co))
-    for i in range(1, co + 1):
+    for i in range(co):
         print("{}: {}".format(i + 1, sys.argv[i]))
