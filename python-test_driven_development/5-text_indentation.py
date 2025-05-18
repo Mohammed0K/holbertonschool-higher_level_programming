@@ -19,7 +19,7 @@ def text_indentation(text):
     char_i = text[:]
 
     for df in ".?:":
-        list_text = s.split(df)
+        list_text = df.split(df)
         char_i = ""
         for i in list_text:
             i = i.strip(" ")
