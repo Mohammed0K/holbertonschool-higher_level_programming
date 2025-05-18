@@ -1,31 +1,28 @@
 #!/usr/bin/python3
-"""This module defines a function a text with 2 new lines after each of these characters: ., ? and :.
-    """
+"""function that prints a text with 2 new lines after each of these characters: ., ? and :
+    - .: each of these characters should be followed by 2 new lines
+    - text should not be empty
+    - text should be a string"""
 
 
 def text_indentation(text):
-    """Prints a text with 2 new lines after each of these characters: ., ? and :.
-
+    """Function that prints a text with 2 new lines after ".?:" characters
     Args:
-        text (str): The text to be printed.
-
+        text (str): The text to be printed
     Raises:
-        TypeError: If text is not a string.
+        TypeError: If text is not a string
     """
-    if not isinstance(text, str):
+
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
-    # Replace multiple spaces with a single space
-    text = ' '.join(text.split())
+    char_i = text[:]
 
-    # Initialize an empty string to store the result
-    result = ""
+    for df in ".?:":
+        list_text = s.split(df)
+        char_i = ""
+        for i in list_text:
+            i = i.strip(" ")
+            char_i = i + df if char_i is "" else char_i + "\n\n" + i + df
 
-    # Iterate through each character in the text
-    for char in text:
-        result += char
-        if char in ".?:":
-            result += "\n\n"
-
-    # Print the final result without leading/trailing whitespace
-    print(result.strip(), end="")
+    print(char_i[:-3], end="")
