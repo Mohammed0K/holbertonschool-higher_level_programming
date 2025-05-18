@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """This module defines a function to print a greeting with a name.
 The function takes a first name and an optional last name as arguments."""
+
+
 def print_square(size):
     """Prints a square with the character #.
 
