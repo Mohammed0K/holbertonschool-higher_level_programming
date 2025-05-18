@@ -1,28 +1,41 @@
 #!/usr/bin/python3
-"""function that prints a text with 2 new lines after each of these characters: ., ? and :
-    - .: each of these characters should be followed by 2 new lines
-    - text should not be empty
-    - text should be a string"""
+"""
+5-text_indentation module
+Defines a function that prints a text with two new lines
+after each of these characters: '.', '?' and ':'
+"""
 
 
 def text_indentation(text):
-    """Function that prints a text with 2 new lines after ".?:" characters
-    Args:
-        text (str): The text to be printed
-    Raises:
-        TypeError: If text is not a string
     """
-
-    if type(text) is not str:
+    Prints text with two new lines after each occurrence of '.', '?' or ':'.
+    Arguments:
+        text (str): The input text to process.
+    Raises:
+        TypeError: If `text` is not a string.
+        ValueError: If `text` is an empty string.
+    """
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
+    if text == "":
+        raise ValueError("text must be a string")
 
-    char_i = text[:]
+    i = 0
+    length = len(text)
+    result = ""
 
-    for df in ".?:":
-        list_text = df.split(df)
-        char_i = ""
-        for i in list_text:
-            i = i.strip(" ")
-            char_i = i + df if char_i is "" else char_i + "\n\n" + i + df
+    while i < length:
+        ch = text[i]
+        result += ch
+        if ch in ".?:":
+            # after punctuation, add two newlines
+            result += "\n\n"
+            # skip any spaces immediately following the punctuation
+            i += 1
+            while i < length and text[i] == " ":
+                i += 1
+            continue
+        i += 1
 
-    print(char_i[:-3], end="")
+    # print without adding extra newline at the end
+    print(result, end="")
