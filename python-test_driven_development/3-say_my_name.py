@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This module defines a function to print a greeting with a name."""
 def say_my_name(first_name, last_name=""):
     """Prints a greeting with the given first and last name.
 
