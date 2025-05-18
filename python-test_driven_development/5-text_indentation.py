@@ -13,12 +13,16 @@ def text_indentation(text):
         text (str): The input text to process.
     Raises:
         TypeError: If `text` is not a string.
-        ValueError: If `text` is an empty string.
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    if text == "":
-        raise ValueError("text must be a string")
+
+    # Remove leading/trailing spaces (but preserve newlines)
+    text = text.strip(' ')
+    # Collapse any spaces immediately before punctuation
+    for punct in ".?:":
+        while " " + punct in text:
+            text = text.replace(" " + punct, punct)
 
     i = 0
     length = len(text)
@@ -37,5 +41,5 @@ def text_indentation(text):
             continue
         i += 1
 
-    # print without adding extra newline at the end
+    # Print result without adding any extra newline at the end
     print(result, end="")
