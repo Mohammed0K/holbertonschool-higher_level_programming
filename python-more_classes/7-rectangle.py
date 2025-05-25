@@ -71,10 +71,10 @@ class Rectangle:
         return "\n".join(symbol * self.__width for _ in range(self.__height))
 
     def __repr__(self):
-        """Return a string representation for debugging."""
+        """for returning a string representation for debugging."""
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        """Handle the deletion of a Rectangle instance."""
+        """for deleting the rectangle instance."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
