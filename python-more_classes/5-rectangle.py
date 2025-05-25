@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for Rectangle class."""
 
+
 class Rectangle:
     """A class that defines a rectangle by its width and height."""
 
@@ -70,4 +71,3 @@ class Rectangle:
     def __del__(self):
         """Handle the deletion of the rectangle instance."""
         print("Bye rectangle...")
-        
