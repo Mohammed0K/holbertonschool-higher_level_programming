@@ -71,7 +71,9 @@ class Rectangle:
         return "\n".join(symbol * self.__width for _ in range(self.__height))
 
     def __repr__(self):
-        """for debugging purposes, return a string representation of the rectangle."""
+        """for debugging purposes, return 
+        a string representation of the rectangle."""
+
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
@@ -81,7 +83,9 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """Compare two rectangles and return the one with the larger area."""
+        """Compare two rectangles 
+        and return the one with the larger area."""
+
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
