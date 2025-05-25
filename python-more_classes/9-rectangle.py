@@ -94,4 +94,3 @@ class Rectangle:
     def square(cls, size=0):
         """factory method to create a square."""
         return cls(size, size)
-    
