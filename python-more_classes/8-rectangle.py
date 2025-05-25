@@ -71,8 +71,9 @@ class Rectangle:
         return "\n".join(symbol * self.__width for _ in range(self.__height))
 
     def __repr__(self):
-        """for debugging purposes, return 
-        a string representation of the rectangle."""
+        """
+        for returning a string representation of the rectangle
+        """
 
         return f"Rectangle({self.__width}, {self.__height})"
 
