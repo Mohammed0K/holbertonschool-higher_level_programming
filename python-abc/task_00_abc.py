@@ -19,7 +19,7 @@ class Dog(Animal):
 
     def sound(self):
         """Return the sound made by a dog"""
-        return "Bark!"
+        return "Bark"
 
 
 class Cat(Animal):
@@ -27,4 +27,5 @@ class Cat(Animal):
 
     def sound(self):
         """Return the sound made by a cat"""
-        return "Meow!"
+        return "Meow"
+    
