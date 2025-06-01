@@ -1,56 +1,26 @@
 #!/usr/bin/python3
-"""Define the Shape class and its subclasses Circle and Rectangle"""
-from abc import ABC, abstractmethod
-import math
+"""Define the SSwimMixinhape class and its subclass flyMixin and Dragon."""
 
 
-class Shape(ABC):
-    """Abstract base class for shapes."""
-    @abstractmethod
-    def area(self):
-        """Calculate the area of the shape."""
-        pass
+class SwimMixin:
+    """Mixin class to add swimming behavior."""
 
-    @abstractmethod
-    def perimeter(self):
-        """Calculate the perimeter of the shape."""
-        pass
+    def swim(self):
+        """Method to simulate swimming."""
+        print("The creature swims!")
 
 
-class Circle(Shape):
-    """Class representing a circle."""
+class FlyMixin:
+    """Mixin class to add flying behavior."""
 
-    def __init__(self, radius):
-        """Initialize the circle with a radius."""
-        self.radius = radius
-
-    def area(self):
-        """Calculate the area of the circle."""
-        return math.pi * self.radius ** 2
-
-    def perimeter(self):
-        """Calculate the perimeter (circumference) of the circle."""
-        return 2 * math.pi * self.radius
+    def fly(self):
+        """Method to simulate flying."""
+        print("The creature flies!")
 
 
-class Rectangle(Shape):
-    """Class representing a rectangle."""
+class Dragon(SwimMixin, FlyMixin):
+    """Class representing a Dragon that can swim and fly."""
 
-    def __init__(self, width, height):
-        """Initialize the rectangle with width and height."""
-        self.width = width
-        self.height = height
-
-    def area(self):
-        """Calculate the area of the rectangle."""
-        return self.width * self.height
-
-    def perimeter(self):
-        """Calculate the perimeter of the rectangle."""
-        return 2 * (self.width + self.height)
-
-
-def shape_info(shape):
-    """Print the area and perimeter of a shape."""
-    print(f"Area: {shape.area()}")
-    print(f"Perimeter: {shape.perimeter()}")
+    def roar(self):
+        """Method to simulate a dragon's roar."""
+        print("The dragon roars!")
