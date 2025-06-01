@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-"""Module that defines a class MyList that inherits from list."""
+"""Module that defines function is kind of class."""
 
 
 def is_kind_of_class(obj, a_class):
-    """Checks if an object is an instance of a class"""
-    bool = False
+    """Return: The boolean if obj is instance of a_class or not
+
+        Args:
+            boolean: to return boolean loge False or True
+    """
+    boolean = False
     if isinstance(obj, a_class):
-            bool = True
-            return bool
+        boolean = True
+    return boolean
