@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""Defines Shape, Circle, Rectangle, and shape_info."""
+""" Module for the Shape abstract class and subclasses """
+
 from abc import ABC, abstractmethod
 import math
 
 
 class Shape(ABC):
+    """Shape class"""
     @abstractmethod
     def area(self):
         pass
@@ -15,18 +17,22 @@ class Shape(ABC):
 
 
 class Circle(Shape):
-    def __init__(self, radius):
+    """Circle Class"""
+
+    def __init__(self, radius=0):
         self.radius = radius
 
     def area(self):
-        return math.pi * self.radius ** 2
+        return math.pi * self.radius * self.radius
 
     def perimeter(self):
         return 2 * math.pi * self.radius
 
 
 class Rectangle(Shape):
-    def __init__(self, width, height):
+    """Rectangle Class"""
+
+    def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
 
@@ -38,5 +44,6 @@ class Rectangle(Shape):
 
 
 def shape_info(shape):
+    """shape information function"""
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
