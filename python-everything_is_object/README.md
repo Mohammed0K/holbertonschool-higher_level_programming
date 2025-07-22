@@ -46,7 +46,7 @@ Make sure to give executable permission to all Python files:
 
 ## Author
 
-- [Your Name]
+- Mohammed ALqabas
 
 ## Acknowledgements
 
